@@ -10,14 +10,14 @@
 .main-slide {
   white-space: nowrap;
   width: 900px;
-  height: 550px; 
+  height: 550px;
   transition: transform 0.5s ease-in-out;
 }
 
-.main-slide > div {
+.main-slide>div {
   background-repeat: no-repeat;
-  background-size:cover;
-  background-position:center center;
+  background-size: cover;
+  background-position: center center;
   height: 550px;
   width: 900px;
   display: inline-block;
@@ -35,26 +35,35 @@
 
 .container .down-button {
   border-radius: 15px 0 0 15px;
-  height: 30px;
-  width: 45%;
-  opacity: 10%;
+  height: 100%;
+  width: 50%;
+  opacity: 30%;
   position: absolute;
-  left: 5%;
-  top:92%;
+  left: 0px;
+  top: 0px;
   cursor: pointer;
   border: 0;
-
+  background:none ;
+  font-size: 40px;
+text-align: left;
 }
 
 .container .up-button {
   border-radius: 0 15px 15px 0;
-  height: 30px;
-  width: 45%;
-  opacity: 10%; 
+  height: 100%;
+  width: 50%;
+  opacity: 30%;
   position: absolute;
-  right: 5%;
-  top: 92%;
+  right: 0px;
+  top: 0px;
   cursor: pointer;
   border: 0;
+  background:none ;
+  font-size: 40px;
+  text-align: right;
+}
 
+.down-button i,
+.up-button i {
+  margin: 20px;
 }
