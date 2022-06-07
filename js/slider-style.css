@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 900px;
+  height: 550px;
+}
+
+.main-slide {
+  white-space: nowrap;
+  width: 900px;
+  height: 550px; 
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-slide > div {
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center center;
+  height: 550px;
+  width: 900px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: -4px;
+}
+
+
+.container .up-button {
+  position: absolute;
+  top: 50%;
+  border: 0;
+}
+
+.container .down-button {
+  border-radius: 15px 0 0 15px;
+  height: 30px;
+  width: 45%;
+  opacity: 10%;
+  position: absolute;
+  left: 5%;
+  top:92%;
+  cursor: pointer;
+  border: 0;
+
+}
+
+.container .up-button {
+  border-radius: 0 15px 15px 0;
+  height: 30px;
+  width: 45%;
+  opacity: 10%; 
+  position: absolute;
+  right: 5%;
+  top: 92%;
+  cursor: pointer;
+  border: 0;
+
+}
