@@ -6,7 +6,7 @@ $chat_id = "-698088056";
 
 $text = '';
 
-foreach ($_POST as $key => $val) {
+foreach ($_GET as $key => $val) {
     $text .= $key . ": " . $val . "\n";
 }
 

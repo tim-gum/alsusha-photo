@@ -12,9 +12,9 @@ $('.popup').on('submit', function (event) {
     $('.submit', form).val('Отправка...');
     $('input, textarea', form).attr('disabled','');
 
-    data.append( 'first-name', 		$('[name="first-name"]', form).val() );
+    data.append( 'first-name',   		$('[name="first-name"]', form).val() );
     data.append( 'second-name', 		$('[name="second-name"]', form).val() );
-    data.append( 'phone', 		$('[name="phone"]', form).val() );
+    data.append( 'phone', 	        	$('[name="phone"]', form).val() );
 
    
 
@@ -28,8 +28,8 @@ $('.popup').on('submit', function (event) {
     });
     
     $.ajax({
-        url: '../php/ajax.php',
-        type: 'POST',
+        url: 'ajax.php',
+        type: 'GET',
         data: data,
         cache: false,
         dataType: 'json',
@@ -57,7 +57,6 @@ $('.popup').on('submit', function (event) {
         complete: function() {
             // Тут можем что-то делать ПОСЛЕ успешной отправки формы
             console.log('Complete')
-            // form.reset() 
         }
     });
 
