@@ -30,7 +30,7 @@
                 <li class="menu-link"><a href="#price">price</a></li>
 
             </ul>
-            <button type="button" class="button">Order</button>
+            <a href="#popup" class="button popup-link"> Order</a>
         </nav>
     </header>
 
@@ -105,7 +105,7 @@
 
 
         <section class="gallery" id="gallery">
-            <h2 class="screen-reader-focusable"">Gallery</h2>
+            <h2 class="screen-reader-focusable">Gallery</h2>
             <div class=" gallery-list">
                 <a href="img/gallery/img-1.jpg" class="gallery-item">
                     <div class="gallery-item-hover"></div>
@@ -170,13 +170,9 @@
 
                 <ul class="price-card-top">
                     <h3 class="card-title">Standart</h3>
+                    <p>(the most popular)</p>
                     <li class="card-title-paragraph first-card-title-paragraph">time</li>
-                    <li class="card-content">1 hour photoshoot
-                        <br>
-                        +
-                        <br>
-                        1 hour prepering
-                    </li>
+                    <li class="card-content">1 hour photoshoot</li>
                     <hr class="hr-card-content">
                     <li class="card-title-paragraph">RAW photos</li>
                     <li class="card-content">More than 500</li>
@@ -200,12 +196,7 @@
                 <ul class="price-card-top">
                     <h3 class="card-title">Premium</h3>
                     <li class="card-title-paragraph first-card-title-paragraph">time</li>
-                    <li class="card-content">2 hour photoshoot
-                        <br>
-                        +
-                        <br>
-                        1 hour prepering
-                    </li>
+                    <li class="card-content">2 hour photoshoot</li>
                     <hr class="hr-card-content">
                     <li class="card-title-paragraph">RAW photos</li>
                     <li class="card-content">All photos</li>
@@ -251,7 +242,7 @@
             </section>
             <div class="logo-btn">
                 <a href="#"><img src="img/logo.svg" alt=""></a>
-                <button type="button" class="button">Order</button>
+                <a type="button" class="button  popup-link">Order</a>
 
             </div>
 
@@ -268,47 +259,54 @@
         </p>
     </footer>
 
-    <section class="modal-order">
-
-        <h2>Reservation</h2>
-        <p>Add information.</p>
-
-        <form class="reservation" action="" method="post">
-
-            <p>
-                <label for="user-name">Name</label>
-                <input id="user-name" type="name" name="user-name" placeholder="Alsusha">
-            </p>
-            <p>
-                <label for="user-name">Name</label>
-                <input id="user-name" type="name" name="user-name" placeholder="Alsusha">
-            </p>
-            <p>
-                <label for="user-name">Name</label>
-                <input id="user-name" type="name" name="user-name" placeholder="Alsusha">
-            </p>
-        </form>
-
-    </section>
+    <div id="popup" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="##" class="popup_close close-popup"><i class="fa-solid fa-xmark"></i></a>
+                <h2>Reservation</h2>
+                <p class="add_info">Add information.</p>
+        
+                <form class="telegram-form">
+                    <input type="text" name="first-name" placeholder="Alsusha" autocomplete="on" />
+                    <input type="text" name="second-name" placeholder="Izmailova" autocomplete="on" />
+                    <input type="tel" name="phone" placeholder="+420 777 133 655" autocomplete="on" />
+                    <p>How can I  contact you?</p>
+                    <label for="radioWhatsUp">What'sApp</label>
+                    <input type="radio" id="radioWhatsApp">
+                    <label for="radioWhatsUp">Telegram</label>
+                    <input type="radio" id="radioTelegram">
+                    <label for="radioWhatsUp">Instagram</label>
+                    <input type="radio" id="radioInstagram">
+                    <input type="text" name="instagram" placeholder="@alsusha_photo">
+                    <input type="checkbox" id="">
+                    <button type="submit" class="button">Send</button>
+                  </form>
+                  
+            </div>
+        </div>
+    </div>
 
     <div>
         <a href="#" class="up-arrow"><i class="fa-solid fa-angle-up"></i></a>
     </div>
 
-    <script src="js/slider.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-    <script>
-        $(".gallery-list").magnificPopup({
-            delegate: "a",
-            type: "image",
-            gallery: {
-                enabled: true
-            }
-        });
-    </script>
+<script src="js/slider.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+<script>
+    $(".gallery-list").magnificPopup({
+        delegate: "a",
+        type: "image",
+        gallery: {
+            enabled: true
+        }
+    });
+</script>
 
+<script src="js/popup.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/send_form.js"></script>
 </body>
 
 </html>

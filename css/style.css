@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 a {
     text-decoration: none;
@@ -106,6 +106,8 @@ li {
     border: 1px solid #fff;
     border-radius: 13px;
     margin-top: -4px;
+    text-align: center;
+    padding-top: 3px;
 }
 
 .button:hover {
@@ -318,6 +320,11 @@ section.gallery {
     margin-top: 50px;
 }
 
+ul p {
+    font-size: 12px;
+    color: #cacaca;
+}
+
 .card-title-paragraph {
     font-size: 14px;
     color: #cacaca;
@@ -466,7 +473,7 @@ footer p {
     font-size: 40px;
 }
 
-.up-arrow:hover i{
+.up-arrow:hover i {
     transition: 1s;
     transform: scale(1.2);
 }
@@ -476,4 +483,107 @@ footer p {
     color: #1B1B1B;
     transition: 1s;
     transform: scale(1.2);
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup_content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup_content {
+    background-color: #070707;
+    color: #F5F5F5;
+    width: 600px;
+    padding: 80px 100px;
+    border-radius: 10px;
+    position: relative;
+    align-content: center;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+
+}
+
+.popup_close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    transform: scale(1);
+    transition: all 0.3s ease 0s;
+
+}
+
+.popup_close:hover {
+    transform: scale(1.5);
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.popup_close:focus {
+    transform: scale(0.8);
+    color: #7C7C7C;
+    transition: all 0.3s ease 0s;
+}
+
+
+.popup_content h2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.add_info {
+    margin-bottom: 30px;
+    color: #cacaca;
+    text-align: center;
+}
+
+.popup_content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup_content input {
+    background-color: #070707;
+    margin-bottom: 20px;
+    padding: 13px;
+    align-content: center;
+    border: solid #585858;
+    border-radius: 10px;
+    text-align: center;
+    width: 480px;
+}
+
+input:focus {
+    outline: none;
+    border:2px solid #fff;
+    color: #fff;
 }
