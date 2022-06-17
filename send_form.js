@@ -1,4 +1,4 @@
-$('.popup').on('submit', function (event) {
+$('.telegram-form').on('submit', function (event) {
 
     event.stopPropagation();
     event.preventDefault();
@@ -53,10 +53,13 @@ $('.popup').on('submit', function (event) {
         },
         error: function( jqXHR, textStatus ) {
             // Тут выводим ошибку
+            console.log('error')
+
         },
         complete: function() {
             // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Complete')
+            console.log(data)
+            
         }
     });
 
